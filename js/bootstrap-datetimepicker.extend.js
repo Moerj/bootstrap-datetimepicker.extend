@@ -1,5 +1,5 @@
 /**
- * [datetimepicker-extend]
+ * [bootstrap-datetimepicker.extend]
  * 依赖于：jQuery、datetimepicker、bootstrap
  * @Author   Moer
  */
