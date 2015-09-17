@@ -17,18 +17,13 @@ bootstrap日历组件功能扩展
 
 	<!-- jQuery -->
 	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-	 
-	<!-- DataTables -->
-	<script src="http://cdn.datatables.net/1.10.7/js/jquery.dataTables.js"></script>
-	
+
 	<!-- dataTables.userExtend -->
 	<script src="./js/dataTables.userExtend.js"></script>
 
 <br>
 
 <h2>API文档</h2>
-
-
 
 <b>实例化datatable</b>
 
