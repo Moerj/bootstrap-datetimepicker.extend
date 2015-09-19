@@ -3,8 +3,13 @@ bootstrap日历组件功能扩展
 
 <p>1.汉化</p>
 <p>2.起始日+结束日,双日期搜索框</p>
+
+<h3>DEMO</h3>
+http://moerj.com/GitHub/bootstrap-datetimepicker.extend
+
 <br>
-<h2>Getting Started</h2>
+
+<h3>Getting Started</h3>
 在使用前，你需要引入jQuery、bootstrap和bootstrap-datetimepicker
 
 
@@ -26,7 +31,7 @@ bootstrap日历组件功能扩展
 
 <br>
 
-<h2>API</h2>
+<h3>API</h3>
 
 <b>实例化datatable</b>
 
