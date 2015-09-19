@@ -17,13 +17,16 @@ bootstrap日历组件功能扩展
 
 	<!-- jQuery -->
 	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	
+	<!-- bootstrap-datetimepicker -->
+	<script src="js/bootstrap-datetimepicker.min.js"></script>
 
-	<!-- dataTables.userExtend -->
-	<script src="./js/dataTables.userExtend.js"></script>
+	<!-- bootstrap-datetimepicker.extend -->
+	<script src="js/bootstrap-datetimepicker.extend.js"></script>
 
 <br>
 
-<h2>API文档</h2>
+<h2>API</h2>
 
 <b>实例化datatable</b>
 
