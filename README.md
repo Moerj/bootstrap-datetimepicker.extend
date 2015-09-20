@@ -38,3 +38,7 @@ http://moerj.com/GitHub/bootstrap-datetimepicker.extend
 <b>实例化datatable</b>
 
 	$('#timepick').Datetimepicker();
+
+<br>
+<h3>Let's work together</h3>
+http://moerj.com
