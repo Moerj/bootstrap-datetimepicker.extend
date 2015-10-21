@@ -1,5 +1,5 @@
 /**
- * [bootstrap-datetimepicker.extend]
+ * [datetimepicker-extend]
  * 依赖于：jQuery、datetimepicker、bootstrap
  * @Author   Moer
  */
@@ -18,26 +18,38 @@
             meridiem: ["上午", "下午"]
     };
 
+    var defaults = {
+        'format' : 'yyyy-mm-dd',//日期格式
+        'minView': 2
+    };
+
     // API
     $.fn.extend({  
 
         // 日历组件初始化
-        Datetimepicker:function (){
+        Datetimepicker:function (options){
             // 查找容器中的input组，并实例化
             var dates       = $(this).find('.date');
             var startPicker = dates.first().find('input');
             var lastPicker  = dates.last().find('input');
 
+            // 配置参数
+            opts = $.extend({}, defaults , options||{});
+
+            if (opts.format !== 'yyyy-mm-dd') {
+                opts.minView = 0 ;
+            }
+
             dates.datetimepicker({
                 // pickerPosition: "bottom-left",
-                format: 'yyyy-mm-dd',
+                format: opts.format,
                 language:  'zh-CN',
                 weekStart: 1,       //一周从哪一天开始
                 todayBtn:  1,
                 autoclose: 1,
                 todayHighlight: 1,  //高亮当前日期
                 startView: 2,       //日期时间选择器打开之后首先显示的视图
-                minView: 2,         //日期时间选择器所能够提供的最精确的时间选择视图。
+                minView: opts.minView,         //日期时间选择器所能够提供的最精确的时间选择视图。
                 endDate: '-0d'    //设置结束日期，'-0d'表示今天，'-1d'表示昨天
             });
 
