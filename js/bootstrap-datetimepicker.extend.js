@@ -70,9 +70,6 @@
             // 配置参数
             opts = $.extend({}, defaults , options||{});
 
-            // 获取当前时间
-            var thisTime = CurentTime();
-
             dates.datetimepicker({
                 // pickerPosition: "bottom-left",
                 format: opts.format,
@@ -82,7 +79,7 @@
                 autoclose: 1,
                 todayHighlight: 1,  //高亮当前日期
                 minView: opts.minView,         //日期时间选择器所能够提供的最精确的时间选择视图。
-                endDate: thisTime    //设置结束日期，'-0d'或'+0d'表示今天，'-1d'表示昨天，(精确到小时以后，发现'-0d'或'+0d'有BUG，不能选择当前小时)
+                endDate: CurentTime()    //设置结束日期，'-0d'或'+0d'表示今天，'-1d'表示昨天，(精确到小时以后，发现'-0d'或'+0d'有BUG，不能选择当前小时)
             });
 
             // 日期控件改变时，根据前后控件的逻辑进行调整
@@ -106,11 +103,18 @@
             });
 
             // 当起始日期控件调出选择时，将它的截止日期 设置为 结束日期控件的时间
-            dates.first().on('show',function(){
+            var firstDates = dates.first();
+            firstDates.on('show',function(){
                 var lastVal = lastPicker.val();
                 if (lastPicker.val() !=='') {
-                    dates.first().datetimepicker('setEndDate', lastVal);
+                    firstDates.datetimepicker('setEndDate', lastVal);
                 }
+            });
+
+            // 手动设置结束日期
+            var lastDates = dates.last();
+            lastDates.on('show', function() {
+                lastDates.datetimepicker('setEndDate', CurentTime());
             });
         }
     });  
